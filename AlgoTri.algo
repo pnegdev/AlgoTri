@@ -1,0 +1,16 @@
+ALGORITHM tri_insertion
+VAR
+    arr: ARRAY OF INTEGER
+    i, g, m, c: INTEGER
+BEGIN
+    g := LENGTH(arr)
+    FOR i := 1 TO g - 1 DO
+    m := i - 1
+    c := arr[i]
+        WHILE m >= 0 AND arr[m] > c DO
+              arr[m + 1] := arr[m]
+              m := m - 1
+        END WHILE
+        arr[m + 1] := c
+    END FOR
+END
